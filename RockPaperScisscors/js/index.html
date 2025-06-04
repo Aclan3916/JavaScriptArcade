@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <script src="https://kit.fontawesome.com/3b8f4f1aff.js" crossorigin="anonymous"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/modal.css">
+    <title>Rock Paper Scissors</title>
+</head>
+<body>
+    <div class="container">
+    <header class="header">
+        <h1> Rock Paper Scissors</h1>
+        <button id="restart" class="restart-btn">Restart Game</button>
+        <div id="score" class="score">
+            <p> 🧑‍💻 0 </p>
+            <p> 🤖 0</p>
+        </div>
+        
+    </header>
+    <h2> Make Your Selection</h2>
+    <div class="choices">
+        <div class="choice-container">
+          <i id="rock" class="choice fas fa-hand-rock fa-5x"></i>
+          <p class="choice-label">Rock</p>
+        </div>
+        <div class="choice-container">
+          <i id="paper" class="choice fa-solid fa-hand fa-5x"></i>
+          <p class="choice-label">Paper</p>
+        </div>
+        <div class="choice-container">
+          <i id="scissors" class="choice fas fa-hand-scissors fa-5x"></i>
+          <p class="choice-label">Scissors</p>
+        </div>
+    </div>
+
+   <div class="hands-container">
+    <i id="player-hand" class="player-hand fas fa-hand-rock fa-5x"></i>
+    <div id="countdown" class="countdown-text"></div>
+    <i id="computer-hand" class="computer-hand fas fa-hand-rock fa-5x"></i>
+   </div>
+</div>
+
+<!-- Modal -->
+ <div class="modal">
+    <div id="result" class="modal-content">
+     
+    </div>
+ </div>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --primary-color: #517664;
+    --dark-color: black;
+    --button-color: #78A798;
+    --button-hover-color: #517664;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    background: #D6E5E3;
+    color: black;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+
+.restart-btn {
+    display: none;
+    background: var(--button-color);
+    color: #252914;
+    padding: 0.4rem 1.3rem;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+.restart-btn:hover {
+    background-color: var(--button-hover-color);
+    color: white;
+}
+
+.header{
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.header h1 {
+    margin-bottom: 1rem;
+}
+
+h2 {
+    text-align: center;
+}
+
+.score
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    font-size: 1.2;
+    color: #252914;
+}
+
+/* .score p:first-child {
+    background: var(--primary-color);
+}
+
+.score p:last-child {
+    background: var(--dark-color);
+} */
+
+.choices {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.choice {
+    cursor: pointer;
+}
+
+.choice:hover {
+    color: var(--primary-color);
+}
+
+.choice-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.choice-label {
+    margin-top: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--dark-color);
+}
+
+.text-win {
+    color: #729774;
+}
+
+.text-lose {
+    color: #9FD8CB;
+}
+
+.hands-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    margin: 40px 0;
+}
+
+.hand-container {
+    transition: transform 0.2s ease-in-out;
+    font-size: 80px;
+}
+
+.animate-hand {
+    animation: bounce 0.4s ease-in-out 3; 
+}
+
+.countdown-text {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    height: 2.5rem;
+    margin-bottom: 20px;
+    color: var(--dark-color);
+    transition: opacity 0.3s ease-in-out;
+}
+
+.player-hand, .computer-hand {
+    display: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+@keyframes bounce {
+    0% {transform: translateY(0);}
+    50% {transform: translateY(-30px);}
+    100% {transform: translateY(0);}
+}
+
+@media(max-width: 700px) {
+    .choice {
+        font-size: 110px;
+    }
+}
+
+@media(max-width: 500px) {
+    .choice {
+        font-size: 80px;
+    }
+}
